@@ -9,7 +9,7 @@ set laststatus=2
 set title
 
 set autoread
-auto FocusGained,BufEnter * :silent! !
+autocmd FocusGained,BufEnter * :silent! !
 
 set tabstop=4
 set softtabstop=4
@@ -19,7 +19,6 @@ set expandtab
 set autoindent
 set backspace=indent,eol,start
 
-"set textwidth=108
 set nowrap
 
 set number
@@ -44,3 +43,5 @@ filetype plugin indent on
 
 nnoremap <Leader>, :bp<CR>
 nnoremap <Leader>. :bn<CR>
+
+autocmd BufRead,BufNewFile *.txt set textwidth=72 | set formatoptions+=a
