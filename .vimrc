@@ -23,7 +23,7 @@ set nowrap
 
 set number
 set numberwidth=5
-set cursorline    
+set cursorline
 
 set incsearch
 set hlsearch
@@ -35,13 +35,16 @@ set smartcase
 
 set splitright
 
+"set keymap=accents
+
 execute pathogen#infect()
 let loaded_matchparen = 1
 
 colorscheme ambient
 filetype plugin indent on
 
-nnoremap <Leader>, :bp<CR>
-nnoremap <Leader>. :bn<CR>
+nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
+nnoremap <Leader>. :bn!<CR>                         " Switch to next buffer
 
-autocmd BufRead,BufNewFile *.txt set textwidth=72 | set formatoptions+=a
+autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
+autocmd BufWritePre * :%s/\s\+$//e                  " Remove trailing spaces upon saving
