@@ -13,11 +13,12 @@ autocmd FocusGained,BufEnter * :silent! !
 
 set tabstop=4
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=0                                    " Use whatever tabstop is set to
 set shiftround
 set expandtab
 set autoindent
 set backspace=indent,eol,start
+set scrolloff=10
 
 set nowrap
 
