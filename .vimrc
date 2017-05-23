@@ -41,7 +41,7 @@ set splitright
 execute pathogen#infect()
 let loaded_matchparen = 1
 
-colorscheme ambient
+colorscheme happy_hacking
 filetype plugin indent on
 
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
