@@ -47,4 +47,6 @@ nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
 nnoremap <Leader>. :bn!<CR>                         " Switch to next buffer
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
+autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
 autocmd BufWritePre * :%s/\s\+$//e                  " Remove trailing spaces upon saving
+
