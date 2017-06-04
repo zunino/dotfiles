@@ -13,11 +13,12 @@ autocmd FocusGained,BufEnter * :silent! !
 
 set tabstop=4
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=0                                    " Use whatever tabstop is set to
 set shiftround
 set expandtab
 set autoindent
 set backspace=indent,eol,start
+set scrolloff=10
 
 set nowrap
 
@@ -40,7 +41,7 @@ set splitright
 execute pathogen#infect()
 let loaded_matchparen = 1
 
-colorscheme ambient
+colorscheme happy_hacking
 filetype plugin indent on
 
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
