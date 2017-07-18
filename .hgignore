@@ -1,0 +1,4 @@
+syntax GLOB
+
+.vim/plugged
+
