@@ -36,10 +36,13 @@ set smartcase
 
 set splitright
 
-"set keymap=accents
-
-execute pathogen#infect()
 let loaded_matchparen = 1
+
+call plug#begin('~/.vim/plugged')
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'vim-syntastic/syntastic'
+call plug#end()
 
 colorscheme happy_hacking
 filetype plugin indent on
