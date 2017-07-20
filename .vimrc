@@ -9,7 +9,6 @@ set laststatus=2
 set title
 
 set autoread
-autocmd FocusGained,BufEnter * :silent! !
 
 set tabstop=4
 set softtabstop=4
@@ -41,7 +40,6 @@ let loaded_matchparen = 1
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-surround'
-    Plug 'vim-syntastic/syntastic'
     Plug 'derekwyatt/vim-fswitch'
 call plug#end()
 
