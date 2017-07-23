@@ -41,9 +41,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-surround'
     Plug 'derekwyatt/vim-fswitch'
+    Plug 'sirver/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-colorscheme happy_hacking
+colorscheme ambient
 filetype plugin indent on
 
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
