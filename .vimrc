@@ -34,8 +34,12 @@ set ignorecase
 set smartcase
 
 set splitright
+set splitbelow
 
 let loaded_matchparen = 1
+
+set t_Co=256
+colorscheme ambient
 
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
@@ -44,11 +48,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'sirver/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-colorscheme ambient
 filetype plugin indent on
 
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
