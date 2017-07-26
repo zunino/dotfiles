@@ -40,6 +40,7 @@ let loaded_matchparen = 1
 
 set t_Co=256
 colorscheme ambient
+set nocursorline
 
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
