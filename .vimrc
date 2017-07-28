@@ -42,6 +42,8 @@ set t_Co=256
 colorscheme ambient
 set nocursorline
 
+set wildignore+=*.o,*.so
+
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-surround'
