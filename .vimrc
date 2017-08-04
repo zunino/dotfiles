@@ -53,6 +53,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
+let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
+
 filetype plugin indent on
 
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
