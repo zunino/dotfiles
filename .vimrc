@@ -51,6 +51,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'sirver/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdtree'
 call plug#end()
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
@@ -60,7 +61,8 @@ filetype plugin indent on
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
 nnoremap <Leader>. :bn!<CR>                         " Switch to next buffer
 
-nmap <Leader>s :FSHere<cr>                          " FSwitch: switch between headers and sources
+nnoremap <Leader>s :FSHere<cr>                      " FSwitch: switch between headers and sources
+nnoremap <Leader>n :NERDTree<cr>                    " Open NERDTree
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
