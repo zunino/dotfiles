@@ -62,7 +62,7 @@ nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
 nnoremap <Leader>. :bn!<CR>                         " Switch to next buffer
 
 nnoremap <Leader>s :FSHere<cr>                      " FSwitch: switch between headers and sources
-nnoremap <Leader>n :NERDTree<cr>                    " Open NERDTree
+nnoremap <Leader>n :NERDTreeFocus<cr>               " Open or move focus to NERDTree
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
