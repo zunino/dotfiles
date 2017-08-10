@@ -42,7 +42,7 @@ set t_Co=256
 colorscheme ambient
 set nocursorline
 
-set wildignore+=*.o,*.so
+set wildignore+=*.o,*.so,a.out
 
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
