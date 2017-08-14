@@ -52,6 +52,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
+    Plug 'conradirwin/vim-bracketed-paste'
 call plug#end()
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
