@@ -64,8 +64,11 @@ filetype plugin indent on
 nnoremap <Leader>, :bp!<CR>                         " Switch to previous buffer
 nnoremap <Leader>. :bn!<CR>                         " Switch to next buffer
 
-nnoremap <Leader>s :FSHere<cr>                      " FSwitch: switch between headers and sources
-nnoremap <Leader>n :NERDTreeFocus<cr>               " Open or move focus to NERDTree
+nnoremap <Leader>s :FSHere<CR>                      " FSwitch: switch between headers and sources
+nnoremap <Leader>n :NERDTreeFocus<CR>               " Open or move focus to NERDTree
+
+map      <F3>      :TogglePencil<CR>
+map      <F4>      :Goyo<CR>
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
