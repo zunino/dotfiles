@@ -55,6 +55,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'conradirwin/vim-bracketed-paste'
     Plug 'junegunn/goyo.vim'
     Plug 'reedes/vim-pencil'
+    Plug 'tpope/vim-repeat'
 call plug#end()
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
