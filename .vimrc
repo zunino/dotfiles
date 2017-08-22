@@ -66,6 +66,10 @@ filetype plugin indent on
 nnoremap <Leader>, :bp!<CR>
 nnoremap <Leader>. :bn!<CR>
 
+" Write current buffer (normal and insert modes)
+nnoremap <F2> :w<CR>
+inoremap <F2> <ESC>:w<CR>a
+
 " Switch between headers and sources (FSwitch plugin)
 nnoremap <Leader>s :FSHere<CR>
 
