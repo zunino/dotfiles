@@ -79,6 +79,9 @@ nnoremap <Leader>n :NERDTreeFocus<CR>
 noremap <F3> :TogglePencil<CR>
 noremap <F4> :Goyo<CR>
 
+" New line in normal mode
+nnoremap <Enter> i<Enter><Esc>
+
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
 
