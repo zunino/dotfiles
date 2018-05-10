@@ -39,7 +39,7 @@ set splitbelow
 let loaded_matchparen = 1
 
 set t_Co=256
-colorscheme ambient
+colorscheme happy_hacking
 set nocursorline
 
 set wildignore+=*.o,*.so,a.out
