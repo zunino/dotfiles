@@ -36,13 +36,28 @@ set smartcase
 set splitright
 set splitbelow
 
-let loaded_matchparen = 1
+set nocursorline
+set noshowmode
 
 set t_Co=256
-colorscheme happy_hacking
-set nocursorline
 
-set wildignore+=*.o,*.so,a.out
+colorscheme happy_hacking
+
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+        \ 'left': [ [ 'mode', 'paste' ],
+        \           [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+        \ ]
+    \ },
+    \ 'component_function': {
+        \ 'gitbranch': 'gitbranch#name'
+    \}
+\}
+
+let loaded_matchparen = 1
+
+set wildignore+=*.o,*.so,a.out,*.class
 
 call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
@@ -56,6 +71,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'reedes/vim-pencil'
     Plug 'tpope/vim-repeat'
+    Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/vim-gitbranch'
 call plug#end()
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
