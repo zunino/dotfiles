@@ -99,6 +99,9 @@ noremap <F4> :Goyo<CR>
 " New line in normal mode
 nnoremap <Enter> i<Enter><Esc>
 
+" Clear search match highlights
+nnoremap <Leader><Space> :nohl<CR>
+
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
 
