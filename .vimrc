@@ -41,7 +41,7 @@ set noshowmode
 
 set t_Co=256
 
-colorscheme happy_hacking
+colorscheme feral
 
 let g:lightline = {
     \ 'colorscheme': 'wombat',
