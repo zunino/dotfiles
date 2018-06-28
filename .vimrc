@@ -79,13 +79,16 @@ let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
 
 filetype plugin indent on
 
-" Switch to previous and next buffers
-nnoremap <Leader>, :bp!<CR>
-nnoremap <Leader>. :bn!<CR>
-
 " Write current buffer (normal and insert modes)
 nnoremap <F2> :w<CR>
 inoremap <F2> <ESC>:w<CR>
+
+noremap <F3> :TogglePencil<CR>
+noremap <F4> :Goyo<CR>
+
+" Switch to previous and next buffers
+nnoremap <Leader>, :bp!<CR>
+nnoremap <Leader>. :bn!<CR>
 
 " Switch between headers and sources (FSwitch plugin)
 nnoremap <Leader>s :FSHere<CR>
@@ -93,14 +96,14 @@ nnoremap <Leader>s :FSHere<CR>
 " Open or move focus to NERDTree
 nnoremap <Leader>n :NERDTreeFocus<CR>
 
-noremap <F3> :TogglePencil<CR>
-noremap <F4> :Goyo<CR>
-
 " New line in normal mode
 nnoremap <Enter> i<Enter><Esc>
 
 " Clear search match highlights
 nnoremap <Leader><Space> :nohl<CR>
+
+" Remove trailing whitespace
+nnoremap <Leader>ws :%s/\s\+$//e<CR>
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
