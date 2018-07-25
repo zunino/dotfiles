@@ -105,6 +105,9 @@ nnoremap <Leader><Space> :nohl<CR>
 " Remove trailing whitespace
 nnoremap <Leader>ws :%s/\s\+$//e<CR>
 
+" Copy to system clipboard
+vnoremap \y "+y
+
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
 
