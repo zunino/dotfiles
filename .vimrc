@@ -109,13 +109,13 @@ nnoremap <Leader><Space> :nohl<CR>
 nnoremap <Leader>ws :%s/\s\+$//e<CR>
 
 " Copy visual selection to system clipboard
-vnoremap \y "+y
+vnoremap <Leader>y "+y
 
 " Paste from system clipboard over visual selection
-vnoremap \p "+P
+vnoremap <Leader>p "+P
 
 " Paste from system clipboard
-nnoremap \p "+P
+nnoremap <Leader>p "+P
 
 " Format current paragraph
 nnoremap <Leader>f gqip
