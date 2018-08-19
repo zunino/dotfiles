@@ -1,4 +1,5 @@
-syntax GLOB
+syntax: glob
 
 .vim/plugged
+*.swp
 
