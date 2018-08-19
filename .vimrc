@@ -99,6 +99,9 @@ nnoremap <Leader>n :NERDTreeFocus<CR>
 " New line in normal mode
 nnoremap <Enter> i<Enter><Esc>
 
+" Tab in normal mode
+nnoremap <Tab> i<Tab><Esc>l
+
 " Clear search match highlights
 nnoremap <Leader><Space> :nohl<CR>
 
