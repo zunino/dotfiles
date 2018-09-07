@@ -102,6 +102,12 @@ nnoremap <Enter> i<Enter><Esc>
 " Tab in normal mode
 nnoremap <Tab> i<Tab><Esc>l
 
+" Space in normal mode
+nnoremap <Space> i<Space><Esc>l
+
+" Backspace in normal mode
+nnoremap <Backspace> X
+
 " Clear search match highlights
 nnoremap <Leader><Space> :nohl<CR>
 
