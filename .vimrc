@@ -112,7 +112,7 @@ nnoremap <Backspace> X
 nnoremap <Leader><Space> :nohl<CR>
 
 " Remove trailing whitespace
-nnoremap <Leader>ws :%s/\s\+$//e<CR>
+nnoremap <Leader>ws :%s/\s\+$//e<CR><bar>:nohl<CR>
 
 " Copy visual selection to system clipboard
 vnoremap <Leader>y "+y
