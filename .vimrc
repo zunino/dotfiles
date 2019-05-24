@@ -36,7 +36,6 @@ set smartcase
 set splitright
 set splitbelow
 
-set nocursorline
 set noshowmode
 
 set t_Co=256
