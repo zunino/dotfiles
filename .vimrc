@@ -23,7 +23,7 @@ set nowrap
 
 set number
 set numberwidth=5
-set cursorline
+set nocursorline
 
 set incsearch
 set hlsearch
