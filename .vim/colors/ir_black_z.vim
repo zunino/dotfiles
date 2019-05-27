@@ -5,11 +5,11 @@
 " Standard colors used in all ir_black themes:
 "
 " normal: #f6f3e8
-" string: #A8FF60  168:255:96                   
+" string: #A8FF60  168:255:96
 " string inner (punc, code, etc): #00A0A0  0:160:160
-" number: #FF73FD  255:115:253                 
+" number: #FF73FD  255:115:253
 " comments: #7C7C7C  124:124:124
-" keywords: #96CBFE  150:203:254             
+" keywords: #96CBFE  150:203:254
 " operators: white
 " class: #FFFFB6  255:255:182
 " method declaration name: #FFD2A7  255:210:167
@@ -17,18 +17,18 @@
 " regexp alternate: #FF8000  255:128:0
 " regexp alternate 2: #B18A3D  177:138:61
 " variable: #C6C5FE  198:197:254
-"  
+"
 " Misc colors:
-"   red color (used for whatever): #FF6C60   255:108:96 
+"   red color (used for whatever): #FF6C60   255:108:96
 "   light red: #FFB6B0   255:182:176
 "   brown: #E18964  good for special
 "   lightpurpleish: #FFCCFF
-" 
+"
 " Interface colors:
 "   background color: black
 "   cursor (where underscore is used): #FFA560  255:165:96
 "   cursor (where block is used): white
-"   visual selection: #1D1E2C  
+"   visual selection: #1D1E2C
 "   current line: #151515  21:21:21
 "   search selection: #07281C  7:40:28
 "   line number: #3D3D3D  61:61:61
@@ -54,11 +54,11 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=da
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
+hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
+hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=reverse
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
@@ -67,17 +67,17 @@ hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=bl
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=white       ctermbg=red         cterm=NONE     guisp=#FF6C60 " undercurl color
-hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
-hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
+hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=bold      ctermfg=208         ctermbg=NONE        cterm=bold
+hi WarningMsg       guifg=white       guibg=#FF6C60     gui=bold      ctermfg=214         ctermbg=NONE        cterm=NONE
 hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
+hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=bold      ctermfg=black       ctermbg=cyan        cterm=bold
 
-hi CursorLine     guifg=NONE        guibg=#121212     gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-hi CursorLineNR   guifg=NONE        guibg=#121212     gui=bold      ctermfg=221         ctermbg=NONE        cterm=NONE
-hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi CursorLine     guifg=NONE        guibg=#121212     gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=bold
+hi CursorLineNR   guifg=NONE        guibg=#121212     gui=bold      ctermfg=214         ctermbg=NONE        cterm=NONE
+hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=bold
+hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=bold      ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
@@ -87,20 +87,20 @@ hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=da
 hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=230       ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=208       ctermbg=NONE        cterm=NONE
 
-hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=221     ctermbg=NONE        cterm=NONE
+hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=214     ctermbg=NONE        cterm=NONE
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=24      ctermbg=NONE        cterm=NONE
 hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=24      ctermbg=NONE        cterm=NONE  " if else end
 
 hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
-hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=221        ctermbg=NONE        cterm=NONE
+hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=214        ctermbg=NONE        cterm=NONE
 
-hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=221       ctermbg=NONE        cterm=none
-hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=221       ctermbg=NONE        cterm=NONE
-hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=221      ctermbg=NONE        cterm=NONE
+hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=214       ctermbg=NONE        cterm=NONE
+hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=214       ctermbg=NONE        cterm=NONE
+hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=214      ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=110   ctermbg=NONE        cterm=NONE
 
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
-hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=221        ctermbg=NONE        cterm=NONE
+hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=214        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
 hi link Character       Constant
@@ -124,11 +124,11 @@ hi link Debug           Special
 
 " Special for Java
 " hi link javaClassDecl    Type
-hi link javaScopeDecl         Identifier 
-hi link javaCommentTitle      javaDocSeeTag 
-hi link javaDocTags           javaDocSeeTag 
-hi link javaDocParam          javaDocSeeTag 
-hi link javaDocSeeTagParam    javaDocSeeTag 
+hi link javaScopeDecl         Identifier
+hi link javaCommentTitle      javaDocSeeTag
+hi link javaDocTags           javaDocSeeTag
+hi link javaDocParam          javaDocSeeTag
+hi link javaDocSeeTagParam    javaDocSeeTag
 
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
@@ -136,29 +136,29 @@ hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      
 
 
 " Special for XML
-hi link xmlTag          Keyword 
-hi link xmlTagName      Conditional 
-hi link xmlEndTag       Identifier 
+hi link xmlTag          Keyword
+hi link xmlTagName      Conditional
+hi link xmlEndTag       Identifier
 
 
 " Special for HTML
-hi link htmlTag         Keyword 
-hi link htmlTagName     Conditional 
-hi link htmlEndTag      Identifier 
+hi link htmlTag         Keyword
+hi link htmlTagName     Conditional
+hi link htmlEndTag      Identifier
 
 
 " Special for Javascript
-hi link javaScriptNumber      Number 
+hi link javaScriptNumber      Number
 hi link javaScriptBraces      Delimiter
 hi link javaScriptIdentifier  Identifier
 
 
 " Special for Python
-"hi  link pythonEscape         Keyword      
+"hi  link pythonEscape         Keyword
 
 
 " Special for CSharp
-hi  link csXmlTag             Keyword      
+hi  link csXmlTag             Keyword
 
 
 " Special for PHP
