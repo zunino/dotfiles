@@ -78,8 +78,8 @@ hi CursorLine       guifg=NONE        guibg=#121212     gui=bold      ctermfg=wh
 hi CursorLineNR     guifg=NONE        guibg=#121212     gui=bold      ctermfg=black       ctermbg=NONE        cterm=NONE
 hi CursorColumn     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=bold
 hi MatchParen       guifg=#f6f3e8     guibg=#857b6f     gui=bold      ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi Pmenu            guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi PmenuSel         guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Pmenu            guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=white       ctermbg=24          cterm=NONE
+hi PmenuSel         guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=white       ctermbg=110         cterm=NONE
 hi Search           guifg=NONE        guibg=#2F2F00     gui=NONE      ctermfg=white       ctermbg=24	      cterm=NONE
 
 " Syntax highlighting
