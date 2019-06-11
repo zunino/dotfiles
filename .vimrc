@@ -67,8 +67,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
     Plug 'conradirwin/vim-bracketed-paste'
-    Plug 'junegunn/goyo.vim'
-    Plug 'reedes/vim-pencil'
     Plug 'tpope/vim-repeat'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
@@ -81,9 +79,6 @@ filetype plugin indent on
 " Write current buffer (normal and insert modes)
 nnoremap <F2> :w<CR>
 inoremap <F2> <ESC>:w<CR>
-
-noremap <F3> :TogglePencil<CR>
-noremap <F4> :Goyo<CR>
 
 " Switch to previous and next buffers
 nnoremap <Leader>, :bp!<CR>
