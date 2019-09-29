@@ -80,6 +80,10 @@ filetype plugin indent on
 nnoremap <F2> :w<CR>
 inoremap <F2> <ESC>:w<CR>
 
+" Insert standard header for source files (normal and insert modes)
+nnoremap <F3> :call header#add()<CR>
+inoremap <F3> <ESC>:call header#add()<CR>
+
 " Switch to previous and next buffers
 nnoremap <Leader>, :bp!<CR>
 nnoremap <Leader>. :bn!<CR>
