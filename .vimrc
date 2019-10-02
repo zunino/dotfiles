@@ -97,9 +97,6 @@ nnoremap <Leader>n :NERDTreeFocus<CR>
 " New line in normal mode
 nnoremap <Enter> i<Enter><Esc>
 
-" Tab in normal mode
-nnoremap <Tab> i<Tab><Esc>l
-
 " Space in normal mode
 nnoremap <Space> i<Space><Esc>l
 
