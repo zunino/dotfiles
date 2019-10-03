@@ -38,9 +38,9 @@ set splitbelow
 
 set noshowmode
 
-set t_Co=256
+set termguicolors
 
-colorscheme feral
+colorscheme nord
 
 let g:lightline = {
     \ 'colorscheme': 'wombat',
