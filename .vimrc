@@ -2,6 +2,7 @@ set nocompatible
 
 set nobackup
 set nowritebackup
+set hidden
 
 set ruler
 set showcmd
@@ -42,17 +43,12 @@ set termguicolors
 
 colorscheme nord
 
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'active': {
-        \ 'left': [ [ 'mode', 'paste' ],
-        \           [ 'gitbranch', 'readonly', 'filename', 'modified' ]
-        \ ]
-    \ },
-    \ 'component_function': {
-        \ 'gitbranch': 'gitbranch#name'
-    \}
-\}
+" Settings based on https://github.com/neoclide/coc.nvim
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set relativenumber
+set signcolumn=yes
 
 let loaded_matchparen = 1
 
@@ -70,9 +66,24 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
+
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+        \ 'left': [ [ 'mode', 'paste' ],
+        \           [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+        \ ]
+    \ },
+    \ 'component_function': {
+        \ 'gitbranch': 'gitbranch#name'
+    \}
+\}
+
+let g:plug_url_format = 'ssh://git@github.com/%s'
 
 filetype plugin indent on
 
@@ -120,6 +131,17 @@ nnoremap <Leader>p "+P
 
 " Format current paragraph
 nnoremap <Leader>f gqip
+
+" Ctrl-space triggers completion
+inoremap <silent><expr> <C-Space> coc#refresh()
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length for text files
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
