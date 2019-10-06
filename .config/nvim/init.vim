@@ -1,9 +1,9 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
-source init-main.vim
-source init-autocmd.vim
-source init-plugins.vim
-source init-mappings.vim
-source init-coc.vim
+runtime init-main.vim
+runtime init-autocmd.vim
+runtime init-plugins.vim
+runtime init-mappings.vim
+runtime init-coc.vim
 
