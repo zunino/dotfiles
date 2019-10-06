@@ -20,6 +20,7 @@ set scrolloff=10
 
 set nowrap
 
+set number
 set relativenumber
 set numberwidth=5
 set nocursorline
