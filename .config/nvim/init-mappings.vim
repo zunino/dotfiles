@@ -43,3 +43,9 @@ nnoremap <Leader>p "+P
 " Format current paragraph
 nnoremap <Leader>f gqip
 
+" Easier window switching
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
