@@ -40,7 +40,7 @@ set noshowmode
 
 set termguicolors
 
-colorscheme nord
+colorscheme feral
 
 set cmdheight=2
 set updatetime=300
