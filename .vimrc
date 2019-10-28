@@ -41,7 +41,7 @@ set noshowmode
 
 set termguicolors
 
-colorscheme nord
+colorscheme feral
 
 " Settings based on https://github.com/neoclide/coc.nvim
 set cmdheight=2
