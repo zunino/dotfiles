@@ -4,15 +4,18 @@
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.occurrencesHighlight": false,
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.colorTheme": "Visual Studio Dark",
     "terminal.integrated.fontSize": 12,
-    "editor.cursorStyle": "line-thin",
     "workbench.editor.enablePreview": false,
     "editor.accessibilitySupport": "off",
     "editor.cursorSurroundingLines": 3,
     "editor.fontLigatures": true,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "debug.console.fontSize": 12,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.tree.indent": 24
+    "workbench.tree.indent": 24,
+    "[go]": {},
+    "go.formatTool": "goimports",
+    "explorer.confirmDragAndDrop": false,
+    "editor.renderWhitespace": "none"
 }
