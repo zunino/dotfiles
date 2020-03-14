@@ -9,7 +9,7 @@
     "workbench.editor.enablePreview": false,
     "editor.accessibilitySupport": "off",
     "editor.cursorSurroundingLines": 3,
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "window.zoomLevel": 0,
     "debug.console.fontSize": 12,
     "workbench.startupEditor": "newUntitledFile",
@@ -17,5 +17,17 @@
     "[go]": {},
     "go.formatTool": "goimports",
     "explorer.confirmDragAndDrop": false,
-    "editor.renderWhitespace": "none"
+    "editor.renderWhitespace": "none",
+    "search.exclude": {
+        "**/build": true,
+        "**/coverage": true
+    },
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', 'Droid Sans Fallback'",
+    "editor.matchBrackets": "never",
+    "editor.minimap.enabled": false,
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80,
+        "editor.quickSuggestions": false
+    }
 }
