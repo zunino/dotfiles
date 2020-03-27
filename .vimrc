@@ -29,7 +29,8 @@ set nocursorline
 set incsearch
 set hlsearch
 
-set mouse=a
+set mouse=r
+set clipboard=unnamedplus
 
 set ignorecase
 set smartcase
@@ -117,15 +118,6 @@ nnoremap <Leader><Space> :nohl<CR>
 
 " Remove trailing whitespace
 nnoremap <Leader>ws :%s/\s\+$//e<CR><bar>:nohl<CR>
-
-" Copy visual selection to system clipboard
-vnoremap <Leader>y "+y
-
-" Paste from system clipboard over visual selection
-vnoremap <Leader>p "+P
-
-" Paste from system clipboard
-nnoremap <Leader>p "+P
 
 " Format current paragraph
 nnoremap <Leader>f gqip
