@@ -29,7 +29,7 @@ set nocursorline
 set incsearch
 set hlsearch
 
-set mouse=r
+set mouse=a
 set clipboard=unnamedplus
 
 set ignorecase
