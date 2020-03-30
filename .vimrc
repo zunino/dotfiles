@@ -48,7 +48,6 @@ colorscheme feral
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-set relativenumber
 set signcolumn=yes
 
 let loaded_matchparen = 1
