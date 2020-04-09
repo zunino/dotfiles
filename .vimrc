@@ -64,8 +64,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+let g:plug_url_format = 'ssh://git@github.com/%s'
 
 let g:ctrlp_custom_ignore = { 'dir': 'node_modules$' }
 
@@ -81,7 +84,9 @@ let g:lightline = {
     \}
 \}
 
-let g:plug_url_format = 'ssh://git@github.com/%s'
+" Have vim-go use gopls for 'go to definition' and 'info'
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 filetype plugin indent on
 
