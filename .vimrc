@@ -91,8 +91,12 @@ let g:go_info_mode='gopls'
 filetype plugin indent on
 
 " Write current buffer (normal and insert modes)
-nnoremap <F2> :w<CR>
-inoremap <F2> <ESC>:w<CR>
+nnoremap <C-S> :update<CR>
+inoremap <C-S> <ESC>:update<CR>
+
+" Coc's rename functionality
+nmap <F2> <Plug>(coc-rename)
+imap <F2> <ESC><Plug>(coc-rename)
 
 " Insert standard header for source files (normal and insert modes)
 nnoremap <F3> :call header#add()<CR>
