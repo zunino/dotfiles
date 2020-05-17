@@ -1,1 +1,1 @@
-/home/zunino/Projects/volcanic/colors/volcanic.vim
+/home/zunino/Projects/volcanic-vim/colors/volcanic.vim
