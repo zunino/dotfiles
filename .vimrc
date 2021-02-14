@@ -1,4 +1,32 @@
+call plug#begin('~/.vim/plugged')
+    Plug 'conradirwin/vim-bracketed-paste'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'derekwyatt/vim-fswitch'
+    Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/vim-gitbranch'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-surround'
+    Plug 'sbdchd/neoformat'
+call plug#end()
+
 set nocompatible
+
+" taken from https://github.com/David-Kunz/vim/blob/master/init.vim
+set completeopt=menu,menuone,noselect
+set diffopt+=vertical
+set cmdheight=1
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 25
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_browse_split = 0
+
+noremap <C-e> :Explore %:p:h<CR>
 
 set nobackup
 set nowritebackup
@@ -43,28 +71,13 @@ set noshowmode
 set termguicolors
 
 " Settings based on https://github.com/neoclide/coc.nvim
-set cmdheight=2
-set updatetime=300
+set updatetime=480
 set shortmess+=c
 set signcolumn=auto
 
 let loaded_matchparen = 1
 
 set wildignore+=*.o,*.so,a.out,*.class
-
-call plug#begin('~/.vim/plugged')
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'tpope/vim-surround'
-    Plug 'derekwyatt/vim-fswitch'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'scrooloose/nerdtree'
-    Plug 'conradirwin/vim-bracketed-paste'
-    Plug 'tpope/vim-repeat'
-    Plug 'itchyny/lightline.vim'
-    Plug 'itchyny/vim-gitbranch'
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
 
 let g:plug_url_format = 'ssh://git@github.com/%s'
 
@@ -107,9 +120,6 @@ nnoremap <Leader>. :bn!<CR>
 " Switch between headers and sources (FSwitch plugin)
 nnoremap <Leader>s :FSHere<CR>
 
-" Open or move focus to NERDTree
-nnoremap <Leader>n :NERDTreeFocus<CR>
-
 " New line in normal mode
 nnoremap <Enter> i<Enter><Esc>
 
@@ -127,6 +137,12 @@ nnoremap <Leader>ws :%s/\s\+$//e<CR><bar>:nohl<CR>
 
 " Format current paragraph
 nnoremap <Leader>f gqip
+
+" Comment current line toggle
+nmap <C-_> gcc
+
+" Comment visual selection toggle
+vmap <C-_> gc
 
 " ===== BEGIN CoC related
 
@@ -183,7 +199,7 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-augroup mygroup
+augroup coc_autocmds
   autocmd!
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
@@ -222,5 +238,15 @@ autocmd BufRead,BufNewFile *.txt set textwidth=72   " Set maximum line length fo
 autocmd BufRead,BufNewFile *.md  set textwidth=72   " Set maximum line length for markdown files
 autocmd TabLeave * stopinsert                       " Returns to normal mode upon leaving a tab
 
-colorscheme volcanic
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1000)
+augroup end
+
+let g:markdown_fenced_languages=['javascript', 'json=javascript', 'go']
+
+let g:gruvbox_termcolors = '256'
+let g:gruvbox_contrast_dark = 'medium'
+colorscheme gruvbox
+"colorscheme volcanic
 
