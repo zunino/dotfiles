@@ -43,3 +43,5 @@ EOF
 
 "==[FZF]====================================================
 
+command! -bang -nargs=* FindInFiles call find#in_files(<bang>0, [<f-args>])
+

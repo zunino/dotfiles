@@ -4,6 +4,7 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
     Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'tpope/vim-commentary'

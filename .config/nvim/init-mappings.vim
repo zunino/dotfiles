@@ -26,11 +26,7 @@ nnoremap <silent> <Leader><Space> :nohl<CR>
 " Remove trailing whitespace
 nnoremap <Leader>ws :%s/\s\+$//e<CR><bar>:nohl<CR>
 
-" Format current paragraph
-nnoremap <Leader>f gqip
-
 " Replace search match in current buffer
-" nnoremap <Leader>r :%s///gc<Left><Left><Left>
 nnoremap <Leader>r :call replace#prompt()<CR>
 
 " Replace visual selection in current buffer
@@ -91,7 +87,10 @@ imap <S-Tab> <Plug>(completion_smart_s_tab)
 "==[FZF]====================================================
 
 " File search
-noremap <silent> <C-P> :FZF<CR>
+noremap <silent> <C-P> <ESC>:FZF<CR>
+
+" Find in files
+noremap <silent> <C-F> <ESC>:FindInFiles<CR>
 
 
 
