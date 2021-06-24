@@ -29,13 +29,17 @@ autocmd TabLeave * stopinsert                       " Returns to normal mode upo
 
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1000)
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({higroup="Search", timeout=200})
 augroup end
 
 let g:markdown_fenced_languages=['javascript', 'json=javascript', 'go']
 
-let g:gruvbox_termcolors = '256'
-let g:gruvbox_contrast_dark = 'medium'
-colorscheme gruvbox
+" set background=light
 
+" let g:gruvbox_termcolors = '256'
+" let g:gruvbox_contrast_dark = 'medium'
+" let g:gruvbox_invert_selection = 0
+" colorscheme gruvbox
 
+let ayucolor="mirage"
+colorscheme ayu

@@ -1,8 +1,11 @@
 "==[GENERAL]================================================
 
 " Write current buffer (normal and insert modes)
-nnoremap <C-S> :update<CR>
-inoremap <C-S> <ESC>:update<CR>
+nnoremap <C-s> :update<CR>
+inoremap <C-s> <ESC>:update<CR>
+
+" Select all
+noremap <C-a> <ESC>gg<S-v>G
 
 " Switch to previous and next buffers
 nnoremap <silent> <Leader>, :bp!<CR>
@@ -31,6 +34,15 @@ nnoremap <Leader>r :call replace#prompt()<CR>
 
 " Replace visual selection in current buffer
 vnoremap <Leader>v y:/<C-r>"<CR>:call replace#prompt()<CR>
+
+" Tab indents visual selection
+vnoremap <Tab> >gv
+
+" Shift+Tab unindents visual selection
+vnoremap <S-Tab> <gv
+
+" Re-yanks last visual selection after paste over
+" vnoremap p "0p
 
 
 "==[CUSTOM AUTOLOAD]========================================
@@ -65,7 +77,7 @@ noremap <C-E> :Explore %:p:h<CR>
 "==[NEOFORMAT]==============================================
 
 " Reformat buffer
-noremap <C-F> :Neoformat<CR>
+noremap <Leader>f :Neoformat<CR>
 
 
 "==[NVIM-LSPCONFIG]=========================================
