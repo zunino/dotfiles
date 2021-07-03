@@ -34,12 +34,12 @@ augroup end
 
 let g:markdown_fenced_languages=['javascript', 'json=javascript', 'go']
 
-" set background=light
+set background=light
 
-" let g:gruvbox_termcolors = '256'
-" let g:gruvbox_contrast_dark = 'medium'
-" let g:gruvbox_invert_selection = 0
-" colorscheme gruvbox
+let g:gruvbox_termcolors = '256'
+let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_invert_selection = 0
+colorscheme gruvbox
 
-let ayucolor="mirage"
-colorscheme ayu
+" let ayucolor="mirage"
+" colorscheme ayu

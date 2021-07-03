@@ -40,8 +40,11 @@ lsp.pyright.setup { on_attach=completion.on_attach }
 -- Go (gopls)
 lsp.gopls.setup { on_attach=completion.on_attach }
 
--- Dockerfike (dockerls)
-lsp.dockerls.setup { on_attach=completion.on_attach }
+-- C++ (clangd)
+lsp.clangd.setup { on_attach=completion.on_attach }
+
+-- Rust (rust_analyzer)
+lsp.rust_analyzer.setup { on_attach=completion.on_attach }
 
 -- C# (omnisharp)
 local pid = vim.fn.getpid()
@@ -50,12 +53,6 @@ lsp.omnisharp.setup {
     cmd={omnisharp_bin, "--languageserver", "--hostPID", tostring(pid)},
     on_attach=completion.on_attach
 }
-
--- C++ (clangd)
-lsp.clangd.setup { on_attach=completion.on_attach }
-
--- Rust (rust_analyzer)
-lsp.rust_analyzer.setup { on_attach=completion.on_attach }
 EOF 
 
 
