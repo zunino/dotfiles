@@ -46,6 +46,9 @@ lsp.clangd.setup { on_attach=completion.on_attach }
 -- Rust (rust_analyzer)
 lsp.rust_analyzer.setup { on_attach=completion.on_attach }
 
+-- JavaScript / TypeScript (tsserver)
+lsp.tsserver.setup { on_attach=completion.on_attach }
+
 -- C# (omnisharp)
 local pid = vim.fn.getpid()
 local omnisharp_bin = "/home/zunino/Tools/OmniSharp/run"

@@ -13,10 +13,6 @@ call plug#begin()
     Plug 'sbdchd/neoformat'
 call plug#end()
 
-runtime init-general.vim
-runtime init-plugins.vim
-runtime init-mappings.vim
-
 let loaded_matchparen = 1
 
 set wildignore+=*.o,*.so,a.out,*.class
@@ -34,7 +30,7 @@ augroup end
 
 let g:markdown_fenced_languages=['javascript', 'json=javascript', 'go']
 
-set background=light
+set background=dark
 
 let g:gruvbox_termcolors = '256'
 let g:gruvbox_contrast_dark = 'medium'
@@ -43,3 +39,7 @@ colorscheme gruvbox
 
 " let ayucolor="mirage"
 " colorscheme ayu
+
+runtime init-general.vim
+runtime init-plugins.vim
+runtime init-mappings.vim
