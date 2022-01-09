@@ -88,13 +88,8 @@ nnoremap <F2> :lua vim.lsp.buf.rename()<CR>
 " Go to definition
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 
-
-"==[COMPLETION-NVIM]========================================
-
-" Tab for triggering completion
-imap <Tab> <Plug>(completion_smart_tab)
-imap <S-Tab> <Plug>(completion_smart_s_tab)
-
+" Show diagnostics on a floating pane
+nnoremap <Leader>d :lua vim.diagnostic.open_float()<CR>
 
 "==[FZF]====================================================
 
