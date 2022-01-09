@@ -1,23 +1,3 @@
-"==[VIM PLUG]===============================================
-
-let g:plug_url_format = 'ssh://git@github.com/%s'
-
-
-"==[LIGHTLINE]==============================================
-
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'active': {
-        \ 'left': [ [ 'mode', 'paste' ],
-        \           [ 'gitbranch', 'readonly', 'filename', 'modified' ]
-        \ ]
-    \ },
-    \ 'component_function': {
-        \ 'gitbranch': 'gitbranch#name'
-    \}
-\}
-
-
 "==[NETRW]==================================================
 
 let g:netrw_banner = 0
@@ -91,9 +71,3 @@ cmp.setup {
   },
 }
 EOF 
-
-
-"==[FZF]====================================================
-
-command! -bang -nargs=* FindInFiles call find#in_files(<bang>0, [<f-args>])
-

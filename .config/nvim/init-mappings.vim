@@ -91,13 +91,13 @@ nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 " Show diagnostics on a floating pane
 nnoremap <Leader>d :lua vim.diagnostic.open_float()<CR>
 
-"==[FZF]====================================================
+"==[TELESCOPE]==============================================
 
 " File search
-noremap <silent> <C-P> <ESC>:FZF<CR>
+noremap <silent> <C-P> <ESC>:Telescope find_files<CR>
 
 " Find in files
-noremap <silent> <C-F> <ESC>:FindInFiles<CR>
+" noremap <silent> <C-F> <ESC>:FindInFiles<CR>
 
 
 
