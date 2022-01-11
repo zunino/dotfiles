@@ -24,6 +24,7 @@ require("packer").startup(function()
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+    use("nvim-telescope/telescope-file-browser.nvim")
 end)
 
 --[ luatab ]--------------------------------------------------------------------
@@ -68,6 +69,12 @@ require("telescope").setup({
 			},
 		},
 	},
+    extensions = {
+        file_browser = {
+            theme = "ivy",
+            mappings = {},
+        }
+    }
 })
 
 --[ lspconfig/cmp ]-------------------------------------------------------------

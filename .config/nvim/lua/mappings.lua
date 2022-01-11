@@ -1,6 +1,6 @@
 local function _map(mode, keys, action, extra)
     extra = extra or {}
-    extra["noremap"] = true
+    if extra["noremap"] == nil then extra["noremap"] = true end
     vim.api.nvim_set_keymap(mode, keys, action, extra)
 end
 
@@ -61,14 +61,9 @@ nmap("<Leader>s", ":FSHere<CR>") -- switch between headers and sources
 
 --[ commentary ]----------------------------------------------------------------
 
-nmap("<C-_>", "gcc")
-imap("<C-_>", "<ESC>gcc")
-vmap("<C-_>", "gc")
-
---[ netrw ]---------------------------------------------------------------------
-
-nmap("<C-E>", ":Explore %:p:h<CR>")
-imap("<C-E>", "<ESC>:Explore %:p:h<CR>")
+nmap("<C-_>", "gcc", {noremap = false})
+imap("<C-_>", "<ESC>gcc", {noremap = false})
+vmap("<C-_>", "gc", {noremap = false})
 
 --[ neoformat ]-----------------------------------------------------------------
 
@@ -82,5 +77,10 @@ nmap("<Leader>d", ":lua vim.diagnostic.open_float()<CR>", {silent = true})
 
 --[ telescope ]-----------------------------------------------------------------
 
-nmap("<C-P>", ":Telescope find_files<CR>", {silent = true})
-imap("<C-P>", "<ESC>:Telescope find_files<CR>", {silent = true})
+nmap("<C-p>", ":Telescope find_files<CR>", {silent = true})
+imap("<C-p>", "<ESC>:Telescope find_files<CR>", {silent = true})
+
+--[ telescope-file-browser ]----------------------------------------------------
+
+nmap("<C-e>", ":lua require('telescope').extensions.file_browser.file_browser()<CR>", {silent = true})
+imap("<C-e>", "<ESC>:lua require('telescope').extensions.file_browser.file_browser()<CR>", {silent = true})
