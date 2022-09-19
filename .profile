@@ -29,3 +29,6 @@ PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH:$HOME/go/bin:/usr/local/go/bin"
 
 export DENO_INSTALL="/home/zunino/.deno"
 PATH="$PATH:$DENO_INSTALL/bin"
+
+export QT_STYLE_OVERRIDE=kvantum
+
