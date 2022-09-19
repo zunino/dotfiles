@@ -47,3 +47,7 @@ vim.g.gruvbox_contrast_dark = 'medium'
 vim.g.gruvbox_invert_selection = 0
 
 vim.cmd("colorscheme gruvbox")
+
+if vim.g.neovide then
+    vim.opt.guifont = "Rec Mono Semicasual:h10"
+end

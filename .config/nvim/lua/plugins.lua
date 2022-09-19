@@ -1,7 +1,6 @@
 require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("conradirwin/vim-bracketed-paste")
-	use("derekwyatt/vim-fswitch")
 	use("itchyny/vim-gitbranch")
 	use("tpope/vim-commentary")
 	use("tpope/vim-repeat")
@@ -12,19 +11,20 @@ require("packer").startup(function()
 	use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
 	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
-	use({
-		"alvarosevilla95/luatab.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+    use("kyazdani42/nvim-web-devicons")
+    use("kyazdani42/nvim-tree.lua")
+	use("alvarosevilla95/luatab.nvim")
+	use("nvim-lualine/lualine.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
+        tag = "0.1.0",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
     use("nvim-telescope/telescope-file-browser.nvim")
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        run = function () require("nvim-treesitter.install").update({with_sync = true}) end
+    })
 end)
 
 --[ luatab ]--------------------------------------------------------------------
@@ -53,6 +53,20 @@ require("lualine").setup({
 	extensions = {},
 })
 
+--[ luatree ]-------------------------------------------------------------------
+
+-- https://github.com/kyazdani42/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt#L343
+require("nvim-tree").setup({
+    disable_netrw = true,
+    hijack_cursor = false,
+    create_in_closed_folder = false,
+    open_on_tab = true,
+    view = {
+        side = "left",
+        width = 32,
+    }
+})
+
 --[ telescope ]-----------------------------------------------------------------
 
 local telescope_actions = require("telescope.actions")
@@ -68,6 +82,9 @@ require("telescope").setup({
 				["<C-j>"] = telescope_actions.move_selection_next,
 			},
 		},
+        file_ignore_patterns = {
+            "node_modules/"
+        }
 	},
     extensions = {
         file_browser = {
@@ -114,8 +131,6 @@ cmp.setup({
 		["<Tab>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
 			else
 				fallback()
 			end
@@ -123,8 +138,6 @@ cmp.setup({
 		["<S-Tab>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
 			else
 				fallback()
 			end
@@ -132,15 +145,20 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
 	},
 })
 
---[ netrw ]---------------------------------------------------------------------
+--[ treesitter ]----------------------------------------------------------------
 
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
-vim.g.netrw_keepdir = 1
-vim.g.netrw_winsize = 25
---vim.g.netrw_list_hide = "\(^\|\s\s\)\zs\.\S\+"
-vim.g.netrw_browse_split = 0
+require("nvim-treesitter.configs").setup({
+    ensure_installed = {"cpp", "python", "rust"},
+    sync_install = false,
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false
+    },
+    indent = {
+        enable = false
+    }
+})
+

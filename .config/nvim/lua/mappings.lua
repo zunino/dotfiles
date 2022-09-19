@@ -55,9 +55,9 @@ vmap("<Tab>", ">gv")
 -- shift+Tab unindents visual selection
 vmap("<S-Tab>", "<gv")
 
---[ fswitch ]-------------------------------------------------------------------
+--[ nvim-tree ]-----------------------------------------------------------------
 
-nmap("<Leader>s", ":FSHere<CR>") -- switch between headers and sources
+nmap("<Leader>e", ":NvimTreeToggle<CR>", {silent = true})
 
 --[ commentary ]----------------------------------------------------------------
 
@@ -73,12 +73,15 @@ nmap("<Leader>f", ":Neoformat<CR>")
 
 nmap("<F2>", ":lua vim.lsp.buf.rename()<CR>")
 nmap("gd", ":lua vim.lsp.buf.definition()<CR>", {silent = true})
-nmap("<Leader>d", ":lua vim.diagnostic.open_float()<CR>", {silent = true})
+nmap("<Leader>d", ":lua vim.diagnostic.open_float(nil, {focus = false})<CR>", {silent = true})
 
 --[ telescope ]-----------------------------------------------------------------
 
 nmap("<C-p>", ":Telescope find_files<CR>", {silent = true})
 imap("<C-p>", "<ESC>:Telescope find_files<CR>", {silent = true})
+
+nmap("<C-f>", ":Telescope live_grep<CR>", {silent = true})
+imap("<C-f>", "<ESC>:Telescope live_grep<CR>", {silent = true})
 
 --[ telescope-file-browser ]----------------------------------------------------
 
