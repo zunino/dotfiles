@@ -11,11 +11,9 @@ colors:
     red:     '0xaa0000'
     green:   '0x44aa44'
     yellow:  '0xf1c41c'
-    # blue:    '0xaa34aa'
     blue:    '0xffffff'
     magenta: '0x529ec4'
-    # cyan:    '0x689d6a'
-    cyan:    '0xf1c41c'
+    cyan:    '0x529ec4'
     white:   '0xaaaaaa'
 
   # Bright colors
