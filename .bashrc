@@ -124,7 +124,16 @@ export NVM_DIR="$HOME/.nvm"
 zd() {
     result=""
     if [ ! -z "$1" ]; then
-        result=$(fdfind -i -t d -1 -a --base-directory ~ $1)
+        result=$(fdfind -i -t d -a --base-directory ~ $1)
+        mapfile -t entries < <(echo "$result")
+        if [ ${#entries[@]} -gt 1 ]; then
+            result=$(echo -e "${result}" | dmenu -l 5 -b)
+            # PS3="? "
+            # select path in "${entries[@]}"; do
+            #     result=$path
+            #     break
+            # done
+        fi
     fi
     cd $result
 }
