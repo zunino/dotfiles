@@ -25,10 +25,13 @@ fi
 
 . "$HOME/.cargo/env"
 
-PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH:$HOME/go/bin:/usr/local/go/bin"
+PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
+PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
+PATH="$PATH:$HOME/.yarn/bin"
 
 export DENO_INSTALL="/home/zunino/.deno"
 PATH="$PATH:$DENO_INSTALL/bin"
 
 export QT_STYLE_OVERRIDE=kvantum
 
+export GOROOT=/usr/local/go
