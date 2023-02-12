@@ -750,7 +750,7 @@ key_bindings:
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
   - { key: N,              mods: Control|Shift,          action: SpawnNewInstance      }
-  - { key: I,              mods: Control,                chars: ". iara\x0D"    }
+  - { key: I,              mods: Command,                chars: ". iara\x0D"    }
 
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
