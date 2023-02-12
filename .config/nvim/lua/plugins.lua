@@ -97,7 +97,7 @@ require("telescope").setup({
 --[ lspconfig/cmp ]-------------------------------------------------------------
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local lspconfig = require("lspconfig")
 
@@ -105,8 +105,33 @@ local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "tsserver"
 for _, lang_server in ipairs(lang_servers) do
 	lspconfig[lang_server].setup({
 		capabilities = capabilities,
+        on_attach = function(client, buffno)
+            local map_opts = { noremap=true, silent=true, buffer=buffno  }
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, map_opts)
+            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, map_opts)
+            vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, map_opts)
+            vim.keymap.set("n", "gn", vim.diagnostic.goto_next, map_opts)
+            vim.keymap.set("n", "gp", vim.diagnostic.goto_prev, map_opts)
+            vim.keymap.set("n", "ga", vim.lsp.buf.code_action, map_opts)
+            vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, map_opts)
+            vim.keymap.set("n", "<F1>", vim.lsp.buf.hover, map_opts)
+            vim.keymap.set("i", "<F1>", vim.lsp.buf.signature_help, map_opts)
+            vim.keymap.set("n", "<Leader>d", ":lua vim.diagnostic.open_float(nil, {focus = false})<CR>", map_opts)
+        end
 	})
 end
+
+lspconfig.yamlls.setup({
+    settings = {
+        yaml = {
+            schemaStore = {
+                url = "https://www.schemastore.org/api/json/catalog.json",
+                enable = true,
+            }
+        }
+    },
+    capabilities = capabilities,
+})
 
 local luasnip = require("luasnip")
 local cmp = require("cmp")

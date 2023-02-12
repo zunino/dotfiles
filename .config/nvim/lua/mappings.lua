@@ -35,7 +35,7 @@ nmap("<C-h>", "<C-w>h")
 nmap("<C-l>", "<C-w>l")
 
 -- delete current buffer
-nmap("<Leader>q", ":bd<CR>", {silent = true})
+nmap("<Leader>q", ":tabclose<CR>", {silent = true})
 
 -- new line in normal mode
 nmap("<Enter>", "i<Enter><Esc>")
@@ -55,9 +55,15 @@ vmap("<Tab>", ">gv")
 -- shift+Tab unindents visual selection
 vmap("<S-Tab>", "<gv")
 
+-- paste from yank register
+nmap("<Leader>p", "\"0p")
+vmap("<Leader>p", "\"0p")
+nmap("<Leader>P", "\"0<S-p>")
+vmap("<Leader>P", "\"0<S-p>")
+
 --[ nvim-tree ]-----------------------------------------------------------------
 
-nmap("<Leader>e", ":NvimTreeToggle<CR>", {silent = true})
+nmap("<Leader>e", ":NvimTreeFindFileToggle<CR>", {silent = true})
 
 --[ commentary ]----------------------------------------------------------------
 
@@ -70,10 +76,7 @@ vmap("<C-_>", "gc", {noremap = false})
 nmap("<Leader>f", ":Neoformat<CR>")
 
 --[ lspconfig ]-----------------------------------------------------------------
-
-nmap("<F2>", ":lua vim.lsp.buf.rename()<CR>")
-nmap("gd", ":lua vim.lsp.buf.definition()<CR>", {silent = true})
-nmap("<Leader>d", ":lua vim.diagnostic.open_float(nil, {focus = false})<CR>", {silent = true})
+-- mappings defined on the on_attach handler
 
 --[ telescope ]-----------------------------------------------------------------
 
