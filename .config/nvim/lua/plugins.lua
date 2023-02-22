@@ -1,4 +1,6 @@
 require("packer").startup(function()
+    -- use("ellisonleao/gruvbox.nvim")
+    use("rebelot/kanagawa.nvim")
 	use("wbthomason/packer.nvim")
 	use("conradirwin/vim-bracketed-paste")
 	use("itchyny/vim-gitbranch")
@@ -26,6 +28,21 @@ require("packer").startup(function()
         run = function () require("nvim-treesitter.install").update({with_sync = true}) end
     })
 end)
+
+--[ gruvbox ]-------------------------------------------------------------------
+-- require("gruvbox").setup({
+--     invert_selection = false,
+--     dim_inactive = true
+-- })
+
+--[ kanagawa ]------------------------------------------------------------------
+
+require("kanagawa").setup({
+    keywordStyle = { italic = false },
+    dimInactive = true,
+    transparent = false,
+})
+vim.cmd("colorscheme kanagawa")
 
 --[ luatab ]--------------------------------------------------------------------
 
@@ -83,8 +100,10 @@ require("telescope").setup({
 			},
 		},
         file_ignore_patterns = {
-            "node_modules/"
-        }
+            "node_modules/",
+            "target/",
+        },
+        layout_strategy = "vertical"
 	},
     extensions = {
         file_browser = {
@@ -101,7 +120,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local lspconfig = require("lspconfig")
 
-local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "tsserver", "sumneko_lua" }
+local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "tsserver", "lua_ls" }
 for _, lang_server in ipairs(lang_servers) do
 	lspconfig[lang_server].setup({
 		capabilities = capabilities,

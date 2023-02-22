@@ -42,12 +42,6 @@ vim.g.loaded_matchparen = 1             -- disable pi_paren default plugin
 --vim.g.do_filetype_lua = 1               -- experimental file type detection in Lua (https://www.reddit.com/r/neovim/comments/rvwsl3/introducing_filetypelua_and_a_call_for_help/)
 --vim.g.did_load_filetypes = 0            -- disable filetype.vim (may cause some detections to fail)
 
-vim.g.gruvbox_termcolors = '256'
-vim.g.gruvbox_contrast_dark = 'medium'
-vim.g.gruvbox_invert_selection = 0
-
-vim.cmd("colorscheme gruvbox")
-
 if vim.g.neovide then
     vim.opt.guifont = "Rec Mono Semicasual:h10"
 end
