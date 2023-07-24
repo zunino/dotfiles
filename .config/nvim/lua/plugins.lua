@@ -1,7 +1,7 @@
-require("packer").startup(function()
+require("packer").startup(function(use)
+	use("wbthomason/packer.nvim")
     -- use("ellisonleao/gruvbox.nvim")
     use("rebelot/kanagawa.nvim")
-	use("wbthomason/packer.nvim")
 	use("conradirwin/vim-bracketed-paste")
 	use("itchyny/vim-gitbranch")
 	use("tpope/vim-commentary")
@@ -120,7 +120,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local lspconfig = require("lspconfig")
 
-local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "tsserver", "lua_ls" }
+local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "denols", "lua_ls" }
 for _, lang_server in ipairs(lang_servers) do
 	lspconfig[lang_server].setup({
 		capabilities = capabilities,
@@ -139,6 +139,16 @@ for _, lang_server in ipairs(lang_servers) do
         end
 	})
 end
+
+lspconfig["lua_ls"].setup({
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = {"use", "vim"},
+            }
+        }
+    }
+})
 
 lspconfig.yamlls.setup({
     settings = {
