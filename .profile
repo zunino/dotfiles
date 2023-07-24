@@ -8,8 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-PYENV_ROOT="$HOME/.pyenv"
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -18,20 +16,3 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-. "$HOME/.cargo/env"
-
-PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
-PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
-PATH="$PATH:$HOME/.yarn/bin"
-
-export DENO_INSTALL="/home/zunino/.deno"
-PATH="$PATH:$DENO_INSTALL/bin"
-
-export QT_STYLE_OVERRIDE=kvantum
-
-export GOROOT=/usr/local/go
