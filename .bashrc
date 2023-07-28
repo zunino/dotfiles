@@ -76,7 +76,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
 
 
 # =====[ALIASES]
@@ -125,19 +124,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-. "$HOME/.cargo/env"
-
 export PYENV_ROOT="$HOME/Tools/pyenv"
-PATH=$PATH:"$PYENV_ROOT/shims"
-
 export GOROOT=$HOME/Tools/go
-PATH="$PATH:$GOROOT/bin:$HOME/go/bin"
-
-#PATH="$PATH:$HOME/.yarn/bin"
-
-#export DENO_INSTALL="/home/zunino/.deno"
-#PATH="$PATH:$DENO_INSTALL/bin"
-
+export NVM_DIR="$HOME/.nvm"
 export QT_STYLE_OVERRIDE=kvantum
-#PYENV_ROOT="$HOME/.pyenv"
 
+PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
