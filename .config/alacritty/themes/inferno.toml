@@ -1,0 +1,27 @@
+# Inferno Theme
+
+[colors]
+
+# Default colors
+primary.background = '0x270d06' # hard contrast: background = '0x1d2021'
+primary.foreground = '0xd9d9d9' # soft contrast: background = '0x32302f'
+  
+# Normal colors
+normal.black =   '0x330000'
+normal.red =     '0xff3300'
+normal.green =   '0xff6600'
+normal.yellow =  '0xff9900'
+normal.blue =    '0xffcc00'
+normal.magenta = '0xff6600'
+normal.cyan =    '0xff9900'
+normal.white =   '0xd9d9d9'
+
+# Bright colors
+bright.black =   '0x663300'
+bright.red =     '0xff6633'
+bright.green =   '0xff9966'
+bright.yellow =  '0xffcc99'
+bright.blue =    '0xffcc33'
+bright.magenta = '0xff9966'
+bright.cyan =    '0xffcc99'
+bright.white =   '0xd9d9d9'

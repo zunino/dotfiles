@@ -1,3 +1,5 @@
+import = ["~/.config/alacritty/themes/kanagawa_wave.toml"]
+
 [window]
 dimensions.columns = 108
 dimensions.lines = 32
@@ -17,5 +19,5 @@ blink_interval = 500
 bindings = [
     { key = "N", mods = "Control | Shift", action = "SpawnNewInstance" },
     { key = "I", mods = "Command", chars = ". iara\r" },
-    { key = "V", mods = "Command", chars = ". deactivate-venv\r" },
+    { key = "V", mods = "Command", chars = ". activate_venv\r" },
 ]

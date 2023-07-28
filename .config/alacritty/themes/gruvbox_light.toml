@@ -1,0 +1,27 @@
+# Gruvbox Light Theme
+
+[colors]
+
+# Default colors
+primary.background = '0xfbf1c7'
+primary.foreground = '0x3c3836'
+  
+# Normal colors
+normal.black =   '0xfbf1c7'
+normal.red =     '0xcc241d'
+normal.green =   '0x98971a'
+normal.yellow =  '0xd79921'
+normal.blue =    '0x458588'
+normal.magenta = '0xb16286'
+normal.cyan =    '0x689d6a'
+normal.white =   '0x7c6f64'
+
+# Bright colors
+bright.black =   '0x928374'
+bright.red =     '0x9d0006'
+bright.green =   '0x79740e'
+bright.yellow =  '0xb57614'
+bright.blue =    '0x076678'
+bright.magenta = '0x8f3f71'
+bright.cyan =    '0x427b58'
+bright.white =   '0x3c3836'
