@@ -79,11 +79,7 @@ fi
 . "$HOME/.cargo/env"
 
 
-# ==[ALIASES]
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# =====[ALIASES]
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -94,7 +90,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # enable color support of ls and also add handy aliases
-alias ll='ls -alF'
+alias ll='ls -l'
 alias la='ls -la'
 
 # https://github.com/sharkdp/bat
@@ -103,7 +99,8 @@ alias bat=batcat
 alias fd=fdfind
 
 
-# ==[USER FUNCTIONS]
+# =====[USER FUNCTIONS]
+
 zd() {
     result=""
     if [ ! -z "$1" ]; then
@@ -122,7 +119,7 @@ zd() {
 }
 
 
-# ==[ENVIRONMENT VARIABLES]
+# =====[ENVIRONMENT VARIABLES]
 
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -130,14 +127,17 @@ fi
 
 . "$HOME/.cargo/env"
 
-#PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
-#PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
+export PYENV_ROOT="$HOME/Tools/pyenv"
+PATH=$PATH:"$PYENV_ROOT/shims"
+
+export GOROOT=$HOME/Tools/go
+PATH="$PATH:$GOROOT/bin:$HOME/go/bin"
+
 #PATH="$PATH:$HOME/.yarn/bin"
 
 #export DENO_INSTALL="/home/zunino/.deno"
 #PATH="$PATH:$DENO_INSTALL/bin"
 
 export QT_STYLE_OVERRIDE=kvantum
-export GOROOT=/usr/local/go
 #PYENV_ROOT="$HOME/.pyenv"
 
