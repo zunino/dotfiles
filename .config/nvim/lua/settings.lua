@@ -42,6 +42,10 @@ vim.g.loaded_matchparen = 1             -- disable pi_paren default plugin
 --vim.g.do_filetype_lua = 1               -- experimental file type detection in Lua (https://www.reddit.com/r/neovim/comments/rvwsl3/introducing_filetypelua_and_a_call_for_help/)
 --vim.g.did_load_filetypes = 0            -- disable filetype.vim (may cause some detections to fail)
 
+vim.g.loaded_node_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+
 if vim.g.neovide then
     vim.opt.guifont = "Rec Mono Semicasual:h10"
 end
