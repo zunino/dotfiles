@@ -90,7 +90,7 @@ fi
 
 # enable color support of ls and also add handy aliases
 alias ll='ls -l'
-alias la='ls -la'
+alias la='ls -lA'
 
 # https://github.com/sharkdp/bat
 alias bat=batcat
@@ -106,12 +106,8 @@ zd() {
         result=$(fdfind -i -t d -a --base-directory ~ $1)
         mapfile -t entries < <(echo "$result")
         if [ ${#entries[@]} -gt 1 ]; then
-            result=$(echo -e "${result}" | dmenu -l 5 -b)
-            # PS3="? "
-            # select path in "${entries[@]}"; do
-            #     result=$path
-            #     break
-            # done
+            # result=$(echo -e "${result}" | dmenu -l 5 -b)
+            result=$(echo -e "${result}" | fzf)
         fi
     fi
     cd $result
@@ -132,3 +128,5 @@ export QT_STYLE_OVERRIDE=kvantum
 PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
