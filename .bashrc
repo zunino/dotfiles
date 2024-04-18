@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\e[1;38;5;34m\]\u@\h\[\e[38;5;15m [\w]\[\e[0m\]\n▸ "
+    PS1="\$(~/Tools/scripts/ps1.sh)"
 else
     PS1="\u@\h⬩ \w\n▸ "
 fi
@@ -121,11 +121,13 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PYENV_ROOT="$HOME/Tools/pyenv"
-export GOROOT=$HOME/Tools/go
+export GOROOT="/usr/local/go"
 export NVM_DIR="$HOME/.nvm"
 export QT_STYLE_OVERRIDE=kvantum
+export DENO_INSTALL="/home/zunino/.deno"
+export ODIN_HOME="$HOME/Tools/odin"
 
-PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims
+PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims:$ODIN_HOME:$DENO_INSTALL/bin
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
