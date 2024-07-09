@@ -94,9 +94,14 @@ alias la='ls -lA'
 
 # https://github.com/sharkdp/bat
 alias bat=batcat
+
 # https://github.com/sharkdp/fd
 alias fd=fdfind
 
+# docker
+alias di='docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"'
+alias dc='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
+alias dca='docker container ls -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
 
 # =====[USER FUNCTIONS]
 
