@@ -67,9 +67,9 @@ nmap("<Leader>e", ":NvimTreeFindFileToggle<CR>", {silent = true})
 
 --[ commentary ]----------------------------------------------------------------
 
-nmap("<C-_>", "gcc", {noremap = false})
-imap("<C-_>", "<ESC>gcc", {noremap = false})
-vmap("<C-_>", "gc", {noremap = false})
+nmap("<C-/>", "gcc", {noremap = false})
+imap("<C-/>", "<ESC>gcc", {noremap = false})
+vmap("<C-/>", "gc", {noremap = false})
 
 --[ neoformat ]-----------------------------------------------------------------
 

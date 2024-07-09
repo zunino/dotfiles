@@ -1,6 +1,5 @@
 require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
-    -- use("ellisonleao/gruvbox.nvim")
     use("rebelot/kanagawa.nvim")
 	use("conradirwin/vim-bracketed-paste")
 	use("itchyny/vim-gitbranch")
@@ -19,7 +18,7 @@ require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
-        tag = "0.1.0",
+        -- tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
     use("nvim-telescope/telescope-file-browser.nvim")
@@ -120,7 +119,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local lspconfig = require("lspconfig")
 
-local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "denols", "lua_ls" }
+local lang_servers = { "pyright", "gopls", "clangd", "rust_analyzer", "ols", "lua_ls", "tsserver" }
 for _, lang_server in ipairs(lang_servers) do
 	lspconfig[lang_server].setup({
 		capabilities = capabilities,
@@ -140,7 +139,7 @@ for _, lang_server in ipairs(lang_servers) do
 	})
 end
 
-lspconfig["lua_ls"].setup({
+lspconfig.lua_ls.setup({
     settings = {
         Lua = {
             diagnostics = {
