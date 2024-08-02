@@ -129,11 +129,11 @@ export PYENV_ROOT="$HOME/Tools/pyenv"
 export GOROOT="/usr/local/go"
 export NVM_DIR="$HOME/.nvm"
 export QT_STYLE_OVERRIDE=kvantum
-export DENO_INSTALL="/home/zunino/.deno"
-export ODIN_HOME="$HOME/Tools/odin"
+export DENO_INSTALL="/home/zunino@softplan.com.br/.deno"
 
-PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims:$ODIN_HOME:$DENO_INSTALL/bin
+PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims:$DENO_INSTALL/bin
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
