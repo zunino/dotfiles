@@ -99,7 +99,7 @@ alias bat=batcat
 alias fd=fdfind
 
 # docker
-alias di='docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"'
+alias di='docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.Size}}"'
 alias dc='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
 alias dca='docker container ls -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
 
