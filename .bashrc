@@ -137,3 +137,4 @@ PATH=$PATH:$HOME/.cargo/bin:$GOROOT/bin:$HOME/go/bin:$PYENV_ROOT/shims:$DENO_INS
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+. "/home/zunino@softplan.com.br/.deno/env"
