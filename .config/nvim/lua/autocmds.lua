@@ -8,17 +8,9 @@ vim.cmd [[
 ]]
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = {"*.txt"},
+    pattern = {"*.txt", "*.md"},
     callback = function()
         vim.opt.textwidth = 80
     end
 })
 
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = {"*.md"},
-    callback = function()
-        vim.opt.textwidth = 80
-    end
-})
-
--- vim.api.nvim_create_augroup("highlight_yank", {clear = true})
